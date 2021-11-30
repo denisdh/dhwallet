@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:layout_marginBottom="1dp"
+    android:background="@drawable/background_item_contact"
+    >
+
+
+    <ImageView
+        android:id="@+id/iv_contact_item"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_spotify"
+    />
+
+
+    <TextView
+        android:id="@+id/item_contact_title"
+        style="@style/Subtitle"
+        android:layout_width="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/item_contact_sudtitle"
+        app:layout_constraintStart_toEndOf="@id/iv_contact_item"
+        app:layout_constraintTop_toTopOf="@id/iv_contact_item"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:text="Leslee Moss"
+    />
+
+
+    <TextView
+        android:id="@+id/item_contact_sudtitle"
+        style="@style/Body1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@id/iv_contact_item"
+        app:layout_constraintBottom_toBottomOf="@id/iv_contact_item"
+        app:layout_constraintTop_toBottomOf="@id/item_contact_title"
+        android:text="Esposa"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

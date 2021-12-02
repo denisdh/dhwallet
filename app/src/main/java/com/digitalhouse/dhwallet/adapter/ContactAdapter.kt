@@ -1,5 +1,6 @@
 package com.digitalhouse.dhwallet.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.digitalhouse.dhwallet.R
 import com.digitalhouse.dhwallet.model.Contact
+import com.digitalhouse.dhwallet.util.load
+
 
 class ContactAdapter( private val items: List<Contact>): RecyclerView.Adapter<RecyclerView.ViewHolder>(){
 
@@ -33,7 +36,9 @@ class ContactViewHolder(view: View): RecyclerView.ViewHolder(view){
 
     fun bind(item: Contact){
 
-        Glide.with(image.context).load(item.image).circleCrop().into(image)
+//      Glide.with(image.context).load(item.image).circleCrop().into(image)
+
+        image.load(image.context, image, item.image)
         title.text = item.name
         subtitle.text = item.type.description
 

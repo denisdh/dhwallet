@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".TransactionFragment">
+
+
+    <View
+        android:id="@+id/background_header"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guide_header"
+        android:background="@drawable/background_card_top"
+        />
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_transaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="@string/title_transações"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_arrow_backward"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/foto"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="16dp"
+            android:layout_gravity="end"
+        />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/tv_transaction_entradas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/entradas"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="151dp"
+        android:layout_marginStart="55dp"
+    />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_down"
+        app:layout_constraintEnd_toStartOf="@id/tv_transaction_entradasValue"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="175.80dp"
+        android:layout_marginEnd="8dp"
+    />
+
+
+    <TextView
+        android:id="@+id/tv_transaction_entradasValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 45,35"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_transaction_entradas"
+        app:layout_constraintStart_toStartOf="@id/tv_transaction_entradas"
+
+    />
+
+
+    <TextView
+        android:id="@+id/tv_transaction_saidas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="saidas"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_transaction_entradas"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="151dp"
+
+        />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow_up"
+        app:layout_constraintEnd_toStartOf="@id/tv_transaction_saidasValue"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="175.80dp"
+        android:layout_marginEnd="8dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_transaction_saidasValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 45,35"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_transaction_saidas"
+        app:layout_constraintStart_toStartOf="@id/tv_transaction_saidas"
+        android:layout_marginTop="6dp"
+
+
+
+
+        />
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_header"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="244dp"
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_start"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_end"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp"
+        />
+
+
+    <TextView
+        android:id="@+id/title_contact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/guide_header"
+        app:layout_constraintStart_toStartOf="@id/guide_start"
+        android:text="@string/title_hoje"
+        android:layout_marginTop="31dp"
+        style="@style/Subtitle"
+        />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_transfer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/title_contact"
+        tools:itemCount="20"
+        tools:listitem="@layout/item_contact"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.digitalhouse.dhwallet.adapter.TransactionAdapter
+import com.digitalhouse.dhwallet.data_mock.DataMock
 import com.digitalhouse.dhwallet.model.Transaction
 
 private const val ARG_ENTRADA = "arg_entrada"
@@ -31,11 +32,7 @@ class TransactionFragment : Fragment(R.layout.fragment_transaction) {
 
         val recycler = view.findViewById<RecyclerView>(R.id.recycler_transaction)
 
-        val listTransaction = MutableList(size = 10){
-            Transaction("SpotiFy Family", "Pagamento", "45")
-        }
-
-        recycler.adapter = TransactionAdapter(listTransaction)
+        recycler.adapter = TransactionAdapter(DataMock().dataTransaction())
 
     }
 

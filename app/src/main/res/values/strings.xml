@@ -10,4 +10,7 @@
     <string name="title_transfer">Transferência</string>
     <string name="search_hint">Busque por uma pessoa</string>
     <string name="title_contatos">Contatos</string>
+    <string name="title_hoje">Hoje</string>
+    <string name="title_transações">Transações</string>
+    <string name="entradas">Entradas</string>
 </resources>

@@ -9,7 +9,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment_container, TransferFragment())
+            .replace(R.id.fragment_container,
+                TransactionFragment.newInstance(
+                    "R$ 45,35",
+                    "R$ 536"
+                )
+            )
             .commit()
 
     }
